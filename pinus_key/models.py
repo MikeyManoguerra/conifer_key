@@ -3,9 +3,6 @@ from enum import Enum
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 
-
-
-
 # Create your models here.
 class Distribution(Enum):
     NORTH = 'Northern states'
