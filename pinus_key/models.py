@@ -78,11 +78,13 @@ class PinusGenus(models.Model):
         return self.scientific_name
 
 class PinusKey(models.Model):
-  characteristic_a = models.CharField(max_length=400)
-  characteristic_b = models.CharField(max_length=400)
-  parent= models.ForeignKey('self', on_delete=models.PROTECT)
+  id = models.IntegerField(primary_key=True)
+  characteristic_a = models.CharField(max_length=200)
+  characteristic_b = models.CharField(max_length=200)
+  parent= models.ForeignKey('self', on_delete=models.PROTECT, blank=True)
   child_a = models.ForeignKey(ContentType, on_delete=models.PROTECT, related_name='+')
   child_b = models.ForeignKey(ContentType, on_delete=models.PROTECT, related_name='+')
-  object_id = models.PositiveIntegerField()
-  choose_a = GenericForeignKey('child_a', 'object_id') 
-  choose_b = GenericForeignKey('child_b', 'object_id')
+  object_id_a = models.PositiveIntegerField()
+  object_id_b = models.PositiveIntegerField()
+  choose_a = GenericForeignKey('child_a', 'object_id_a') 
+  choose_b = GenericForeignKey('child_b', 'object_id_b')
