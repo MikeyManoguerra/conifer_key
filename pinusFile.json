@@ -1,0 +1,235 @@
+{
+  "Pinus strobus": {
+    "scientific name": "Pinus strobus",
+    "common name": "eastern white pine",
+    "characteristics": {
+      "dist": "northern and middle states",
+      "needles per cluster": "5",
+      "needle length": "3-6",
+      "trunk sprouts after fire": false,
+      "many old cones on tree": false,
+      "cones longer than three inches": true,
+      "cones longer than wide": true,
+      "cone prickle type": "lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus rigida": {
+    "scientific name": "Pinus rigida",
+    "common name": "pitch pine",
+    "characteristics": {
+      "dist": "northern and middle states",
+      "needles per cluster": "3",
+      "needle length": "2-4",
+      "trunk sprouts after fire": true,
+      "many old cones on tree": true,
+      "cones longer than three inches": false,
+      "cones longer than wide": "round",
+      "cone prickle type": "stout",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus serotina": {
+    "scientific name": "Pinus serotina",
+    "common name": "pond pine; swamp pine",
+    "characteristics": {
+      "dist": "south",
+      "needles per cluster": "3",
+      "needle length": "4-8",
+      "trunk sprouts after fire": true,
+      "many old cones on tree": true,
+      "cones longer than three inches": false,
+      "cones longer than wide": "round",
+      "cone prickle type": "thin to lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus taeda": {
+    "scientific name": "Pinus taeda",
+    "common name": "loblolly pine",
+    "characteristics": {
+      "dist": "south",
+      "needles per cluster": "3",
+      "needle length": "6-9",
+      "trunk sprouts after fire": false,
+      "many old cones on tree": true,
+      "cones longer than three inches": true,
+      "cones longer than wide": true,
+      "cone prickle type": "stout",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus palustris": {
+    "scientific name": "Pinus palustris",
+    "common name": "longleaf pine",
+    "characteristics": {
+      "dist": "south",
+      "needles per cluster": "3",
+      "needle length": "8-18",
+      "trunk sprouts after fire": false,
+      "many old cones on tree": false,
+      "cones longer than three inches": true,
+      "cones longer than wide": true,
+      "cone prickle type": "thin",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus banksiana": {
+    "scientific name": "Pinus banksiana",
+    "common name": "jack pine",
+    "characteristics": {
+      "dist": "Northern states",
+      "needle length": "2-4",
+      "needles per cluster": "2",
+      "trunk sprouts after fire": null,
+      "twigs rough near needle": true,
+      "many old cones on tree": true,
+      "cones longer than three inches": false,
+      "cones longer than wide": true,
+      "cone prickle type": "thin to lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus sylvestris": {
+    "scientific name": "Pinus sylvestris",
+    "common name": "Scots pine; Scotch pine",
+    "characteristics": {
+      "dist": "Northern states",
+      "needle length": "2-3",
+      "needles per cluster": "2",
+      "twigs rough near needle": false,
+      "trunk sprouts after fire": null,
+      "many old cones on tree": false,
+      "cones longer than three inches": false,
+      "cones longer than wide": "round",
+      "cone prickle type": "lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus nigra nigra": {
+    "scientific name": "Pinus nigra nigra",
+    "common name": "European black pine; Austrian pine",
+    "characteristics": {
+      "dist": "Northern states",
+      "needle length": "3-6",
+      "needles per cluster": "2",
+      "twigs rough near needle": true,
+      "trunk sprouts after fire": null,
+      "many old cones on tree": false,
+      "cones longer than three inches": "Both",
+      "cones longer than wide": true,
+      "cone prickle type": "stout",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus resinosa": {
+    "scientific name": "Pinus resinosa",
+    "common name": "red pine",
+    "characteristics": {
+      "dist": "Northern states",
+      "needle length": "4-6",
+      "needles per cluster": "2",
+      "twigs rough near needle": "Both",
+      "trunk sprouts after fire": null,
+      "many old cones on tree": false,
+      "cones longer than three inches": false,
+      "cones longer than wide": true,
+      "cone prickle type": "lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus pungens": {
+    "scientific name": "Pinus pungens",
+    "common name": "table mountain pine",
+    "characteristics": {
+      "dist": "Middle states",
+      "needle length": "2-3",
+      "needles per cluster": "2",
+      "twigs rough near needle": true,
+      "trunk sprouts after fire": null,
+      "many old cones on tree": true,
+      "cones longer than three inches": "Both",
+      "cones longer than wide": "round",
+      "cone prickle type": "stout",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus virginiana": {
+    "scientific name": "Pinus virginiana",
+    "common name": "Virginia pine",
+    "characteristics": {
+      "dist": "Middle states",
+      "needle length": "2-3",
+      "needles per cluster": "2",
+      "twigs rough near needle": false,
+      "trunk sprouts after fire": null,
+      "many old cones on tree": true,
+      "cones longer than three inches": false,
+      "cones longer than wide": "Both",
+      "cone prickle type": "thin",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus echinata": {
+    "scientific name": "Pinus echinata",
+    "common name": "shortleaf pine",
+    "characteristics": {
+      "dist": "middle and southern states",
+      "needle length": "3-5",
+      "needles per cluster": "2",
+      "twigs rough near needle": true,
+      "many old cones on tree": true,
+      "trunk sprouts after fire": null,
+      "cones longer than three inches": false,
+      "cones longer than wide": true,
+      "cone prickle type": "thin",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus glabra": {
+    "scientific name": "Pinus glabra",
+    "common name": "spruce pine",
+    "characteristics": {
+      "dist": "south",
+      "needle length": "2-4",
+      "needles per cluster": "2",
+      "twigs rough near needle": false,
+      "many old cones on tree": true,
+      "trunk sprouts after fire": null,
+      "cones longer than three inches": false,
+      "cones longer than wide": true,
+      "cone prickle type": "thin to lacking",
+      "short description": "",
+      "full description": ""
+    }
+  },
+  "Pinus elliotii": {
+    "scientific name": "Pinus elliotii",
+    "common name": "slash pine",
+    "characteristics": {
+      "dist": "south",
+      "needle length": "5-11",
+      "needles per cluster": "2",
+      "twigs rough near needle": true,
+      "many old cones on tree": false,
+      "cones longer than three inches": true,
+      "cones longer than wide": true,
+      "cone prickle type": "stout",
+      "trunk sprouts after fire": null,
+      "short description": "",
+      "full description": ""
+    }
+  }
+}

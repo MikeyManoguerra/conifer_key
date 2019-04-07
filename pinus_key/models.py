@@ -64,16 +64,18 @@ class PinusGenus(models.Model):
                             for key in Distribution]
     common_name = models.CharField(max_length=150)
     scientific_name = models.CharField(max_length=150)
-    summary = models.CharField(max_length=5000)
-    old_cones = models.BooleanField()
-    twig_texture = models.BooleanField()
-    fire_resilience = models.BooleanField()
+    description = models.CharField(max_length=5000)
     distribution = models.CharField(choices=DISTRIBUTION_CHOICES, max_length=60 )
-    needle_length  = models.CharField(choices = NEEDLE_LENGTH_CHOICES, max_length=60 )
     needle_count = models.IntegerField(choices = NEEDLE_COUNT_CHOICES )
+    needle_length  = models.CharField(choices = NEEDLE_LENGTH_CHOICES, max_length=60 )
+    old_cones = models.BooleanField()
     cone_length = models.CharField(choices = CONE_LENGTH_CHOICES, max_length=60 )
     cone_shape = models.CharField(choices = CONE_SHAPE_CHOICES, max_length=60 )
     cone_prickles = models.CharField(choices = CONE_PRICKLES_CHOICES, max_length=60 )
+    twig_texture = models.BooleanField()
+    fire_resilience = models.BooleanField()
+    def __str__(self):
+        return self.scientific_name
 
 class PinusKey(models.Model):
   characteristic_a = models.CharField(max_length=400)
