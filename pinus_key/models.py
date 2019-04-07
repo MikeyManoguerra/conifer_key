@@ -22,15 +22,15 @@ class NeedleCount(Enum):
 
 
 class NeedleLength(Enum):
-    TWO_THREE = '2-3',
-    TWO_FOUR = '2-4',
-    THREE_FIVE = '3-5',
-    THREE_SIX = '3-6',
-    FOUR_SIX = '4-6',
-    FOUR_EIGHT = '4-8',
-    FIVE_ELEVEN = '5-11',
-    SIX_NINE = '6-9',
-    EIGHT_EIGHTEEN = '8-18',
+    TWO_THREE = '2-3'
+    TWO_FOUR = '2-4'
+    THREE_FIVE = '3-5'
+    THREE_SIX = '3-6'
+    FOUR_SIX = '4-6'
+    FOUR_EIGHT = '4-8'
+    FIVE_ELEVEN = '5-11'
+    SIX_NINE = '6-9'
+    EIGHT_EIGHTEEN = '8-18'
 
 
 class ConeLength(Enum):
@@ -54,16 +54,16 @@ class ConePrickles(Enum):
 
 
 class PinusGenus(models.Model):
-    NEEDLE_LENGTH_CHOICES = [(key.value, key.value.title())
+    NEEDLE_LENGTH_CHOICES = [(key, key.value)
                              for key in NeedleLength]
-    NEEDLE_COUNT_CHOICES = [(key.value, key.value.title())
+    NEEDLE_COUNT_CHOICES = [(key, key.value)
                             for key in NeedleCount]
-    CONE_LENGTH_CHOICES = [(key.value, key.value.title())
+    CONE_LENGTH_CHOICES = [(key, key.value)
                            for key in ConeLength]
-    CONE_SHAPE_CHOICES = [(key.value, key.value.title()) for key in ConeShape]
-    CONE_PRICKLES_CHOICES = [(key.value, key.value.title())
+    CONE_SHAPE_CHOICES = [(key, key.value) for key in ConeShape]
+    CONE_PRICKLES_CHOICES = [(key, key.value)
                              for key in ConePrickles]
-    DISTRIBUTION_CHOICES = [(key.value, key.value.title())
+    DISTRIBUTION_CHOICES = [(key, key.value)
                             for key in Distribution]
     common_name = models.CharField(max_length=150)
     scientific_name = models.CharField(max_length=150)
@@ -71,19 +71,19 @@ class PinusGenus(models.Model):
     old_cones = models.BooleanField()
     twig_texture = models.BooleanField()
     fire_resilience = models.BooleanField()
-    distribution = models.CharField(choices=DISTRIBUTION_CHOICES )
-    needle_length  = models.CharField(choices = NEEDLE_LENGTH_CHOICES )
+    distribution = models.CharField(choices=DISTRIBUTION_CHOICES, max_length=60 )
+    needle_length  = models.CharField(choices = NEEDLE_LENGTH_CHOICES, max_length=60 )
     needle_count = models.IntegerField(choices = NEEDLE_COUNT_CHOICES )
-    cone_length = models.CharField(choices = NEEDLE_LENGTH_CHOICES )
-    cone_shape = models.CharField(choices = CONE_SHAPE_CHOICES )
-    cone_prickles = models.CharField(choices = CONE_PRICKLES_CHOICES )
+    cone_length = models.CharField(choices = CONE_LENGTH_CHOICES, max_length=60 )
+    cone_shape = models.CharField(choices = CONE_SHAPE_CHOICES, max_length=60 )
+    cone_prickles = models.CharField(choices = CONE_PRICKLES_CHOICES, max_length=60 )
 
 class PinusKey(models.Model):
   characteristic_a = models.CharField(max_length=400)
   characteristic_b = models.CharField(max_length=400)
   parent= models.ForeignKey('self', on_delete=models.PROTECT)
-  child_a = models.ForeignKey(ContentType)
-  child_b = models.ForeignKey(ContentType)
+  child_a = models.ForeignKey(ContentType, on_delete=models.PROTECT, related_name='+')
+  child_b = models.ForeignKey(ContentType, on_delete=models.PROTECT, related_name='+')
   object_id = models.PositiveIntegerField()
   choose_a = GenericForeignKey('child_a', 'object_id') 
   choose_b = GenericForeignKey('child_b', 'object_id')
