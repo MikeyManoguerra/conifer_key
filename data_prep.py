@@ -2,7 +2,7 @@ import json
 from constants import *
 import pprint
 from pinusKey import pinus_binary_location
-
+from django.contrib.contenttypes.models import ContentType
 
 with open("pinusFile.json", 'r') as read_file:
     Pinus_Dictionary = json.load(read_file)
@@ -45,10 +45,10 @@ for key, value in Pinus_Dictionary.items():
     pinus_genus_list.append(value)
 
 
-pp = pprint.PrettyPrinter(depth=5)
-pp.pprint(Pinus_Dictionary)
-with open('djangoPinus.json', 'w') as write_file:
-    json.dump(pinus_genus_list, write_file)
+# pp = pprint.PrettyPrinter(depth=5)
+# pp.pprint(Pinus_Dictionary)
+# with open('djangoPinus.json', 'w') as write_file:
+#     json.dump(pinus_genus_list, write_file)
 
 for key, value in pinus_binary_location.items():
     value['id'] = key
@@ -57,14 +57,14 @@ for key, value in pinus_binary_location.items():
     value['characteristic_b'] = value['b']
     value.pop('b', None)
     if type(value['choose_a']) == int:
-        value['child_a']='self'
+        value['child_a']= ContentType.objects.get(app_label='pinus_key', model='PinusKey')
         value['object_id_a']=value['choose_a']
     elif type(value['choose_a']) == str :
         value['child_a']= 'PinusGenus'
         value['object_id_a'] =  value['choose_a']
     value.pop('choose_a', None)
     if type(value['choose_b']) == int:
-        value['child_b']='self'
+        value['child_b']=ContentType.objects.get(app_label='pinus_key', model='PinusKey')
         value['object_id_b']=value['choose_b']
     elif type(value['choose_b']) == str:
         value['child_b']= 'PinusGenus'
@@ -72,8 +72,15 @@ for key, value in pinus_binary_location.items():
     value.pop('choose_b', None)
     value.pop('current', None)
 
-pp = pprint.PrettyPrinter(depth=5)
-pp.pprint(pinus_binary_location)
+location_list = []    
 
-# with open('djangoPinusKey.json', 'w') as write_file:
-    # json.dump(, write_file)
+for key, value in pinus_binary_location.items():
+    location_list.append(value)
+
+
+
+pp = pprint.PrettyPrinter(depth=5)
+pp.pprint(location_list)
+
+with open('djangoPinusKey.json', 'w') as write_file:
+    json.dump(location_list, write_file)
