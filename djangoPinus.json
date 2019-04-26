@@ -113,7 +113,7 @@
     "cone_shape": true,
     "cone_prickles": "lacking",
     "fire_resilience": null,
-    "twig_texture": "Both",
+    "twig_texture": true,
     "description": "Pinus resinosa, known as red pine or Norway pine, is a pine native to North America. It occurs from Newfoundland west to Manitoba, and south to Pennsylvania, with several smaller, disjunct populations occurring in the Appalachian Mountains in Virginia and West Virginia, as well as a few small pockets in extreme northern New Jersey and northern Illinois."
   },
   {

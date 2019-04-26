@@ -72,8 +72,8 @@ class PinusGenus(models.Model):
     cone_length = models.CharField(choices = CONE_LENGTH_CHOICES, max_length=60 )
     cone_shape = models.CharField(choices = CONE_SHAPE_CHOICES, max_length=60 )
     cone_prickles = models.CharField(choices = CONE_PRICKLES_CHOICES, max_length=60 )
-    twig_texture = models.BooleanField()
-    fire_resilience = models.BooleanField()
+    twig_texture = models.BooleanField(null=True)
+    fire_resilience = models.BooleanField(null=True)
     def __str__(self):
         return self.scientific_name
 
